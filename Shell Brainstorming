@@ -1,0 +1,27 @@
+Microsoft Window (c) Microsoft Corporation. All rights reserved.
+
+C:>python
+Python 3.8.8 (Feb 19 2021, 13:18:16) [MSC 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import random
+>>> s = set(input("please enter a string:"))
+please enter a string:123456789
+>>> s
+{'4', '3', '7', '1', '8', '9', '5', '6', '2'}
+>>> Blue= set(random.sample(s,5))
+>>> Yellow= s-Blue
+>>> Yellow
+{'4', '9', '5', '2'}
+>>> Blue
+{'3', '7', '1', '8', '6'}
+>>> Blue2= set(random.sample(s,5))
+>>> Yellow2= s-Blue2
+>>> Blue & Yellow2
+{'6', '7'}
+>>> Blue3= set(random.sample(s,5))
+>>> Yellow3= s-Blue3
+>>> Blue & Yellow2 & Yellow3 # considering the user behavior was blue followed by yellow followed by yellow
+{'7'}
+>>> Blue & Yellow2 & Blue3  # considering the user behavior was blue followed by yellow followed by blue
+{'6'}
+>>>
